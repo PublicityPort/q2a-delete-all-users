@@ -20,11 +20,17 @@ class qa_delete_all_users {
         }
         
         $allusers = qa_db_select_with_pending(qa_db_all_users_except_admins());
-        echo '<p>';
-        foreach($allusers as $user){
-            print('<br />Deleting user with userid ' . $user['userid']);
-            qa_delete_user($user['userid']);
+
+        if(count($allusers) > 0){
+
+            echo '<p>';
+            foreach($allusers as $user){
+                print('<br />Deleting user with userid ' . $user['userid']);
+                qa_delete_user($user['userid']);
+            }
+            echo '</p>';
+        }else{
+            echo '<p>Nothing to remove :)</p>';
         }
-        echo '</p>';
     }
 }

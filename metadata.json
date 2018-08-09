@@ -1,7 +1,7 @@
 {
     "name": "Delete all users.",
     "uri" : "https://github.com/PublicityPort/q2a-delete-all-users",
-	"description": "Allows the admin to delete all other users. This can help you generate test data and pass it on to your developers and testers.",
+	"description": "Allows the admin to delete all other users except the super admin. This can help you generate test data and pass it on to your developers and testers.",
 	"version": "1.0.0",
 	"date": "2018-09-09",
 	"author": "Pubiclity Port",
