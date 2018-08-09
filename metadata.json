@@ -1,0 +1,12 @@
+{
+    "name": "Delete all users.",
+    "uri" : "https://github.com/PublicityPort/",
+	"description": "Allows the admin to delte all users",
+	"version": "1.0.0",
+	"date": "2018-09-09",
+	"author": "Pubiclity Port",
+    "author_uri": "https://publicityport.com",
+    "update_uri": "",
+    "min_q2a": "1.8.0",
+    "load_order": "after_db_init"
+}
