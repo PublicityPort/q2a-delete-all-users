@@ -1,1 +1,1 @@
-"# q2a-delete-all-users" 
+# q2a-delete-all-users
