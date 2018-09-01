@@ -1,12 +1,21 @@
 <?php
 	
 class qa_delete_all_users {
+    private $directory; //Stores and returns present directory
+    private $urltoroot; //Stores and returns URL till the directory, use with URL
+    
+	function load_module( $directory, $urltoroot )
+	{
+		$this->directory = $directory;
+		$this->urltoroot = $urltoroot;
+    }
+    
     function match_request($request) {
 		$parts=explode('/', $request);
 		return (count($parts) == 1 && $parts[0]=='delete-all-users'); 
     }
     function process_request($request) {
-        require_once QA_PLUGIN_DIR . '/q2a-delete-all-users/db/selects.php';
+        require_once $this->directory . 'db/selects.php';
         require_once QA_INCLUDE_DIR.'app/users-edit.php';
 
         $userid = qa_get_logged_in_userid();
